@@ -1,12 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Strategy;
 using UnityEngine;
 
 public class Character
 {
-    private Animator _animator;
+    private readonly Animator _animator;
+    
     private Attack1 _attack1;
     private Attack2 _attack2;
     private Attack3 _attack3;

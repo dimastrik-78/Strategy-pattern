@@ -6,7 +6,7 @@ namespace Strategy
     {
         public void StartAnimation(Animator animation)
         {
-            
+            animation.Play("Attack3");
         }
     }
 }
