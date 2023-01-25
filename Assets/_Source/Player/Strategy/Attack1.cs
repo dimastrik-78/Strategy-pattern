@@ -1,12 +1,12 @@
 using UnityEngine;
 
-namespace Strategy
+namespace Player.Strategy
 {
-    public class Attack2 : IAttackStrategy
+    public class Attack1 : IAttackStrategy
     {
         public void StartAnimation(Animator animation)
         {
-            animation.Play("Attack2");
+            animation.Play("Attack1");
         }
     }
 }
