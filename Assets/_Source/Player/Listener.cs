@@ -1,17 +1,19 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Player
 {
     public class Listener : MonoBehaviour
     {
-        
+        public event Action OnButtonPress;
+
+        [SerializeField] private KeyCode button;
         
         private void Update()
         {
-            if (Input.GetKeyDown(attack))
+            if (Input.GetKeyDown(button))
             {
-                Debug.Log(Animator.StringToHash("Attack1"));
-                // _character.PerformAttack();
+                OnButtonPress?.Invoke();
             }
         }
     }

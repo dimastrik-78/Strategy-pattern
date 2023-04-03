@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,8 +25,6 @@ namespace Player
 
         private void FirstVariantAttack()
         {
-            // _character.SetStrategy(1);
-            
             Clear();
             button1.image.color = Color.green;
             button1.interactable = false;
@@ -35,8 +32,6 @@ namespace Player
 
         private void SecondVariantAttack()
         {
-            // _character.SetStrategy(2);
-            
             Clear();
             button2.image.color = Color.green;
             button2.interactable = false;
@@ -44,8 +39,6 @@ namespace Player
 
         private void ThirdVariantAttack()
         {
-            // _character.SetStrategy(3);
-
             Clear();
             button3.image.color = Color.green;
             button3.interactable = false;

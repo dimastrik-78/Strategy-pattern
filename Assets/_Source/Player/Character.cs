@@ -11,7 +11,7 @@ namespace Player
         private AttackThird _attackThird;
         private int _variantAttack;
 
-        private void Awake()
+        public Character()
         {
             _attackFirst = new AttackFirst();
             _attackSecond = new AttackSecond();
