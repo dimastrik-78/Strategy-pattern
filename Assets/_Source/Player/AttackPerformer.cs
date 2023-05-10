@@ -11,6 +11,10 @@ namespace Player
 
         private void OnEnable()
         {
+            button1.onClick.AddListener(Clear);
+            button2.onClick.AddListener(Clear);
+            button3.onClick.AddListener(Clear);
+            
             button1.onClick.AddListener(FirstVariantAttack);
             button2.onClick.AddListener(SecondVariantAttack);
             button3.onClick.AddListener(ThirdVariantAttack);
@@ -25,21 +29,18 @@ namespace Player
 
         private void FirstVariantAttack()
         {
-            Clear();
             button1.image.color = Color.green;
             button1.interactable = false;
         }
 
         private void SecondVariantAttack()
         {
-            Clear();
             button2.image.color = Color.green;
             button2.interactable = false;
         }
 
         private void ThirdVariantAttack()
         {
-            Clear();
             button3.image.color = Color.green;
             button3.interactable = false;
         }

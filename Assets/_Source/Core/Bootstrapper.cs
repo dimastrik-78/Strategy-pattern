@@ -13,7 +13,7 @@ namespace Core
         
         private void Awake()
         {
-            _character = new Character();
+            _character = new Character(animator);
             listener.OnButtonPress += _character.PerformAttack;
         }
     }

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,12 +20,6 @@ namespace Enemy.ProjectileLogic
 
         private void EnableDisableObject()
         {
-            // for (int i = 0; i < _listProjectiles.Count; i++)
-            // {
-            //     _listProjectiles[i].SetActive(false);
-            // }
-            // _listProjectiles[_count].SetActive(true);
-            
             _listProjectiles[_count].SetActive(false);
 
             _count++;

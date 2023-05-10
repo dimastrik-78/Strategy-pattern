@@ -4,9 +4,17 @@ namespace Player.Strategy
 {
     public class AttackSecond : IAttackStrategy
     {
-        public void StartAnimation(Animator animation)
+        private readonly Animator _animator;
+        private readonly int _attack2 = Animator.StringToHash("Attack2");
+
+        public AttackSecond(Animator animator)
         {
-            animation.Play("Attack2");
+            _animator = animator;
+        }
+
+        public void StartAnimation()
+        {
+            _animator.SetTrigger(_attack2);
         }
     }
 }

@@ -12,32 +12,44 @@ namespace Enemy
         [SerializeField] private Button button2;
         [SerializeField] private Button button3;
         
-        void Start()
+        void OnEnable()
         {
+            button1.onClick.AddListener(Clear);
+            button2.onClick.AddListener(Clear);
+            button3.onClick.AddListener(Clear);
+            
             button1.onClick.AddListener(FirstVariantAttack);
             button2.onClick.AddListener(SecondVariantAttack);
             button3.onClick.AddListener(ThirdVariantAttack);
         }
 
+        private void OnDisable()
+        {
+            button1.onClick.RemoveAllListeners();
+            button2.onClick.RemoveAllListeners();
+            button3.onClick.RemoveAllListeners();
+        }
+
         private void FirstVariantAttack()
         {
             enemy1.SetActive(true);
-            enemy2.SetActive(false);
-            enemy3.SetActive(false);
         }
 
         private void SecondVariantAttack()
         {
-            enemy1.SetActive(false);
             enemy2.SetActive(true);
-            enemy3.SetActive(false);
         }
 
         private void ThirdVariantAttack()
         {
+            enemy3.SetActive(true);
+        }
+
+        private void Clear()
+        {
             enemy1.SetActive(false);
             enemy2.SetActive(false);
-            enemy3.SetActive(true);
+            enemy3.SetActive(false);
         }
     }
 }

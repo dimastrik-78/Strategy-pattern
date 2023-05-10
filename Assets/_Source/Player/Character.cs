@@ -6,16 +6,17 @@ namespace Player
 {
     public class Character
     {
-        private AttackFirst _attackFirst;
-        private AttackSecond _attackSecond;
-        private AttackThird _attackThird;
+        private readonly AttackFirst _attackFirst;
+        private readonly AttackSecond _attackSecond;
+        private readonly AttackThird _attackThird;
+        
         private int _variantAttack;
 
-        public Character()
+        public Character(Animator animator)
         {
-            _attackFirst = new AttackFirst();
-            _attackSecond = new AttackSecond();
-            _attackThird = new AttackThird();
+            _attackFirst = new AttackFirst(animator);
+            _attackSecond = new AttackSecond(animator);
+            _attackThird = new AttackThird(animator);
         }
 
         public void SetStrategy(int variant) => _variantAttack = variant;
@@ -24,15 +25,15 @@ namespace Player
         {
             if (_variantAttack == 1)
             { 
-                _attackFirst.StartAnimation(animator);
+                _attackFirst.StartAnimation();
             }
             else if (_variantAttack == 2)
             {
-                _attackSecond.StartAnimation(animator);
+                _attackSecond.StartAnimation();
             }
             else if (_variantAttack == 3)
             {
-                _attackThird.StartAnimation(animator);
+                _attackThird.StartAnimation();
             }
         }
     }
