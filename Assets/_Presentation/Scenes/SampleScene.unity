@@ -263,6 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c8fd49ba904482a76e37cddd93aa2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackPerformer: {fileID: 360474474}
   listener: {fileID: 1006874326}
   animator: {fileID: 1006874327}
 --- !u!1 &485333057
@@ -932,10 +933,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1198326058}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b871441b50e15c4aa6c37f665fdf82f, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b8c896a71244bf4fa69970919e8f044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 1198326059}
 --- !u!1 &1345932199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,8 +1255,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4d2a22ad847400eaaad96ec1e0e2ca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countProjectile: 2
+  countProjectile: 3
   prefabProjectile: {fileID: 1352444076044079024, guid: 051568fd9559d7a4abb9a34d5a0f2ba3, type: 3}
+  spawn: {fileID: 1198326059}
   shoot: {fileID: 1198326060}
 --- !u!1 &1654353394
 GameObject:

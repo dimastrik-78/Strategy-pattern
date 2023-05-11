@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2D: {fileID: 3327561628659106777}
+  delay: 2
   x: -15
 --- !u!50 &3327561628659106777
 Rigidbody2D:

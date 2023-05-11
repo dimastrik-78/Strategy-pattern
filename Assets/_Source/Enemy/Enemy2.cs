@@ -8,18 +8,13 @@ namespace Enemy
     {
         [SerializeField] private int countProjectile;
         [SerializeField] private GameObject prefabProjectile;
-        [SerializeField] private Shoot shoot;
+        [SerializeField] private ShootPoint shoot;
         
-        private List<GameObject> _list = new();
-
         private void Start()
         {
-            for (int i = 0; i < countProjectile; i++)
-            {
-                _list.Add(Instantiate(prefabProjectile, Vector3.zero, Quaternion.identity));
-            }
-
-            shoot.UpdateList(_list);
+            ObjectPool objectPool = new ObjectPool(prefabProjectile, transform);
+            objectPool.CreateObject(countProjectile);
+            shoot.SetObjectPool(objectPool);
         }
         
         public override void Update() { }

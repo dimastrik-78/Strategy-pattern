@@ -6,6 +6,7 @@ namespace Core
 {
     public class Bootstrapper : MonoBehaviour
     {
+        [SerializeField] private AttackPerformer attackPerformer;
         [SerializeField] private Listener listener;
         [SerializeField] private Animator animator;
 
@@ -14,6 +15,7 @@ namespace Core
         private void Awake()
         {
             _character = new Character(animator);
+            attackPerformer.VariantAttack += _character.SetStrategy;
             listener.OnButtonPress += _character.PerformAttack;
         }
     }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,6 +6,8 @@ namespace Player
 {
     public class AttackPerformer : MonoBehaviour
     {
+        public event Action<int> VariantAttack;
+
         [SerializeField] private Button button1;
         [SerializeField] private Button button2;
         [SerializeField] private Button button3;
@@ -31,18 +34,21 @@ namespace Player
         {
             button1.image.color = Color.green;
             button1.interactable = false;
+            VariantAttack?.Invoke(1);
         }
 
         private void SecondVariantAttack()
         {
             button2.image.color = Color.green;
             button2.interactable = false;
+            VariantAttack?.Invoke(2);
         }
 
         private void ThirdVariantAttack()
         {
             button3.image.color = Color.green;
             button3.interactable = false;
+            VariantAttack?.Invoke(3);
         }
 
         private void Clear()
